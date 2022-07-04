@@ -1,9 +1,14 @@
-function Character(){
+import './character.css'
+
+function Character(prors){
+    let {name, desc, img} = prors;
+
     return(
         <div>
-            <h2>Bart</h2>
-            <img src={"https://upload.wikimedia.org/wikipedia/ru/thumb/2/29/Bart_Simpson.gif/180px-Bart_Simpson.gif"}/>
-        </div>
+            <h2>{name}</h2>
+            <p className={'desc'}>{desc}</p>
+            <img src={img}/>
+         </div>
     )
 }
 export default Character;

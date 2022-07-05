@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Character from "./components/character";
+// import Posts from "./components/posts/Posts";
 
-function App() {
-  return (
-      <div>
-        <Character/>
+import Users from "./components/users/Users";
+
+export default function App() {
+    return (<div>
+        <Users/>
 
 
-      </div>
-  );
+    </div>);
 }
-export default App;
 
-
-
-
-
-// <div>
-//     <h2>Bart</h2>
-//     <img src={"https://upload.wikimedia.org/wikipedia/ru/thumb/2/29/Bart_Simpson.gif/180px-Bart_Simpson.gif"}/>
-//
-//
-// </div>

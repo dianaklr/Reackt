@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import Character from "./components/character";
+import {useState} from "react";
 
-function App() {
+export default function App() {
+
+    let [counter, setCounter] = useState(0);
+
   return (
       <div>
-        <Character/>
+          <h1>{counter}</h1>
+          <button onClick={()=>{
+              setCounter(counter++);
+          }}> increment
 
-
+          </button>
       </div>
   );
 }
-export default App;
 
 
 
 
-
-// <div>
-//     <h2>Bart</h2>
-//     <img src={"https://upload.wikimedia.org/wikipedia/ru/thumb/2/29/Bart_Simpson.gif/180px-Bart_Simpson.gif"}/>
-//
-//
-// </div>

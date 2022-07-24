@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-import Character from "./components/character";
+import { useForm } from 'react-hook-form';
 
-function App() {
+export  default function App() {
+    let {register, handleSubmit} = useForm();
+
+    const onSubmit = (data) =>{
+        console.log(data)
+    }
+
   return (
-      <div>
-        <Character/>
-
-
+      <div>add
+          <form onSubmit={handleSubmit(onSubmit)}>
+                {/*спед регістра - автоматично зробить нейм з тайтлом - автоматизація*/}
+                <input {...register("title")}/>
+                <input {...register("body")}/>
+                <input type="submit" value={'save post'}/>
+          </form>
       </div>
   );
 }
-export default App;
 
 
+/*
+         <input type='text' name={'title'}/>
+          <input type='text' name={'body'}/>
+ */
 
-
-
-// <div>
-//     <h2>Bart</h2>
-//     <img src={"https://upload.wikimedia.org/wikipedia/ru/thumb/2/29/Bart_Simpson.gif/180px-Bart_Simpson.gif"}/>
-//
-//
-// </div>
